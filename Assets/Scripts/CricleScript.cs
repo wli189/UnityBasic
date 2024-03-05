@@ -30,7 +30,6 @@ public class CricleScript : MonoBehaviour
         }
         else {
             has_Jumped = false;
-            Debug.log(" ");
         }
     }
 
