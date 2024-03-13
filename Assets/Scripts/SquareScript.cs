@@ -16,16 +16,20 @@ public class SquareScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Color randColor;
         if (Input.GetKeyDown("z")) {
-            randColor = ColorWheel[Random.Range(0, 9)];
-            Debug.Log("the random color is: " + randColor);
-            m_Renderer.material.color = randColor;
-            shiftCount++;
+            ShiftColor();
         }
     }
 
     public Color GetColor() {
         return m_Renderer.material.color;
+    }
+    
+    public void ShiftColor() {
+        Color randColor;
+        randColor = ColorWheel[Random.Range(0, 9)];
+        Debug.Log("the random color is: " + randColor);
+        m_Renderer.material.color = randColor;
+        shiftCount++;
     }
 }
