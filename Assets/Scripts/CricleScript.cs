@@ -6,7 +6,7 @@ public class CricleScript : MonoBehaviour
 {
     Renderer m_Renderer;
     Rigidbody m_Rigidbody;
-    public int threshhold = 0;
+    public int threshold = 0;
     bool has_Jumped = false;
     GameObject parentCube;
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class CricleScript : MonoBehaviour
     void Update()
     {
         UpdateColor();
-        if (parentCube.GetComponent<SquareScript>().shiftCount % 5 == threshhold) {
+        if (parentCube.GetComponent<SquareScript>().shiftCount % 5 == threshold) {
 
             if (!has_Jumped) { // has it jumped yet?
                 m_Rigidbody.AddForce(new Vector3(0f, 420f, 0f), ForceMode.Force);
